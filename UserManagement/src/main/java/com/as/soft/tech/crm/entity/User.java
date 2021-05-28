@@ -1,15 +1,26 @@
 package com.as.soft.tech.crm.entity;
 
+import javax.annotation.Generated;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "user_account")
 public class User {
-   
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	
+
 	private String email;
-	
+
 	private String password;
-	
+
 	private String firstName;
-	
+
 	private String lastName;
 
 	public long getId() {
@@ -51,6 +62,5 @@ public class User {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	
-	
+
 }
